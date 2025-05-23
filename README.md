@@ -1,1 +1,1 @@
-# Admin-Dashboard
+This is the second and last project of Intermediate HTML and CSS through The Odin Project, a Dashboard, where the knowledge for grid layouts in combination with flexbox was applied.

@@ -1,21 +1,30 @@
+/* External font */
+
 @font-face {
     font-family: 'robotoregular';
-    src: url('roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
-         url('roboto-variablefont_wdthwght-webfont.woff') format('woff');
+    src: url('./fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('./fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+/* Golbal styling */
+
+*::before,
+*::after,
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "robotoregular";
 }
 
 body{
     min-height: 100vh;
 }
+
+/* Layout design */
 
 .container{
     min-height: 100vh;
@@ -32,5 +41,237 @@ body{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     background-color: rgb(81, 160, 233);
-    padding: 1rem;
+    padding: 2rem;
+}
+
+/* sidebar design */
+
+.side-container{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 15px
+}
+
+.side-icons{
+    display: grid;
+}
+
+.side-icons img:first-child, .side-text span:first-child{
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+}
+
+.side-icons img:nth-child(7), .side-text span:nth-child(7){
+    margin-bottom: 3rem;
+}
+
+.side-icons img{
+    justify-self: center;
+    align-self: center;
+}
+
+.side-text{
+    display: grid;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.side-text span{
+    justify-self: start;
+    align-self: center;
+}
+
+.txt-small{
+    font-size: 1.4rem;
+}
+
+.side-icons, .side-text{
+    gap: 20px;
+}
+
+/* header design */
+
+.header{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding: 1rem 4rem 1rem;
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input{
+    border: rgb(182, 179, 179) solid 1px;
+    width: 15rem;
+    padding: 0.1rem 0.5rem 0.1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.top-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-right span{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cat-avatar{
+    border-radius: 50%;
+}
+
+.bottom-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.bottom-name span:last-child{
+    font-size: 1.8rem;
+}
+
+.bottom-right{
+    align-content: center;
+}
+
+.button-group{
+    display: flex;
+    gap: 30px;
+}
+
+button{
+    width: 6rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: rgb(81, 160, 233);
+    color: white;
+}
+
+/* main content design */
+
+.main-content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 2rem 2rem 2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    position: relative;
+    min-height: 200px;
+    border: none;
+    border-radius: 7px;
+    padding: 2.5rem;
+    box-shadow: 4px 4px 10px rgb(154, 198, 206);
+}
+
+.card-text{
+    color: gray;
+}
+
+.card::before{
+    content: "";
+    background-color: #ecb938;
+    border: none;
+    border-radius: 7px 0 0 7px;
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    top: 0;
+    left: 0;
+}
+
+.main-right, .right-heading{
+    padding-left: 2rem;
+}
+
+.main-right{
+    display: grid;
+    grid-template-rows: 2fr 50px 1fr;
+}
+
+.announce{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 3rem;
+}
+
+.announce div:first-child, .announce div:nth-child(2){
+    box-shadow: 0 1px 1px rgb(154, 198, 206);
+}
+
+.announce p{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.announce, .trending{
+    box-shadow: 4px 4px 10px rgb(154, 198, 206);
+    border-radius: 7px;
+}
+
+.trending{
+    padding-left: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.trending-content img{
+    border-radius: 50%;
+}
+
+.trending-content{
+    display: flex;
+    gap: 20px;
+}
+
+.trending-txt{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.trending-txt span:last-child{
+    color: gray;
+    font-size: 0.9rem;
 }
