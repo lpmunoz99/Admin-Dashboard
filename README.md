@@ -1,1 +1,1 @@
-This is the last project of Intermediate HTML and CSS through The Odin Project, a Dashboard, where the knowledge for grid layouts in combination with flexbox was applied.
+This is the last project of Intermediate HTML and CSS through The Odin Project. A Dashboard, where the knowledge for grid layouts in combination with flexbox was applied.
